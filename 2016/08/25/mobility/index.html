@@ -310,9 +310,8 @@
 <p>结构灵敏度(Mobility)可描述为受力物体或结构受到外力 (Fluctuating Force) 作用下所产生的振动量.</p>
 <p>实验中测量结构灵敏度(Mobility)是通过安装三个加速感应器在测量结构板上, 并由锤子作为外力使测试结构产生振动, 得到的加速数值做时间积分可得到速度. 最后, 速度除以外力可以得到导纳值. 当激发点和采集点重合时称为一个激发点导纳(Drive Point Mobility), 不重合时为交叉导纳(Cross-Mobility).</p>
 <p>激发点灵敏度(Drive Point Mobility)和交叉灵敏度(Cross-Mobility)组成的矩阵(Matrices)可用来计算此结构的共振(Resonances).</p>
-<p>灵敏度(Mobility)计算公式解析:<br>$$ Mobility = \frac{v(x,y)}{F(x_{o},y_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum_{m=1}^\infty \sum_{n=1}^{\infty} (\frac{1}{\omega^{2}_{mn} - \omega^{2}} \times [\sin \frac{m\pi x}{a} \sin \frac{n\pi y}{b}]) $$</p>
-<p>$$ Mobility = \frac{v(x,y)}{F(x_{o},y_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum_{m=1}^\infty \sum_{n=1}^{\infty} (\frac{1}{\omega^{2}_{mn} - \omega^{2}} \times [\sin \frac{m\pi x_{o}}{a} \sin \frac{n\pi y_{o}}{b}]) $$</p>
-<ul>
+<p>灵敏度(Mobility)计算公式解析:</p>
+<script type="math/tex; mode=display">Mobility = \frac{v(x,y)}{F(x\_{o},y\_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum\_{m=1}^\infty \sum\_{n=1}^{\infty} (\frac{1}{\omega^{2}\_{mn} - \omega^{2}} \times [\sin \frac{m\pi x}{a} \sin \frac{n\pi y}{b}])</script><script type="math/tex; mode=display">Mobility = \frac{v(x,y)}{F(x\_{o},y\_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum\_{m=1}^\infty \sum\_{n=1}^{\infty} (\frac{1}{\omega^{2}\_{mn} - \omega^{2}} \times [\sin \frac{m\pi x\_{o}}{a} \sin \frac{n\pi y\_{o}}{b}])</script><ul>
 <li>$(x,y)$ 为灵敏度值所在的位置; $(x_{o},y_{o})$ 为外力施加所在位置.</li>
 <li>$v$ 为速度(Velocity); $F$ 为外力 (Drive Force).</li>
 <li>结构质量 $m=\rho v = \rho h A = \rho h a b$; 模态质量 (Modal Mass) 是每一个模态的质量为$\frac{1}{4}$的总结构质量, $\frac{\rho h a b}{4}$.</li>
@@ -460,7 +459,7 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 <!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -472,7 +471,7 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

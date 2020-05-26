@@ -304,8 +304,10 @@
                     <article id="post-content">
                         <h4 id="内部损失因子-（Internal-Loss-Factors）"><a href="#内部损失因子-（Internal-Loss-Factors）" class="headerlink" title="内部损失因子 （Internal Loss Factors）"></a>内部损失因子 （Internal Loss Factors）</h4><p>内部损失因子，$\eta$，是当使用统计能量分析（S.E.A）和其他常规方法来预测结构的振动相应的重要参数。当模态密度（Modal Density）有文献中有解析式存在时。而用来计算结构部件和声学介质中的内部损失因子的解析式还未有公认的定义。其中主要的问题是，内部损失因子通常根据每阶模态不同而改变，这样使其复杂程度提升。因此，内部损失因子被广泛认为是在预测所研究系统的动态响应时的一个主要无法确定因素。</p>
 <p>内部损失因子包括几种不同的阻尼或者能量损失，有些是线性关系，有些是非线性关系。两种广泛可接受的线性阻尼关系是（1）结构阻尼是一个关于构成这个结构材料为参数的方程。（2）声辐射阻尼是关于由于结构表面振动能量辐射到周围的流体介质中的辐射损失。在现实中，有时会有非线性的阻尼机制存在于各个结构部件边界连接处。这些包括气泵的连接处阻尼或者挤压薄膜阻尼，还有摩擦力。</p>
-<p>这三种阻尼机制是相对各自独立存在，因此，一个结构部件的内部损失因子是上方所介绍的三种阻尼关系的线性累加：<br>$$\eta = \eta_{s} + \eta_{rad} + \eta_{j}$$<br>$\eta_{s}$是损失因子关于在此结构部件中的能量损耗。$\eta_{rad}$是关于声辐射阻尼的损失因子。$\eta_{j}$是关于在各个结构部件连接处的能量损耗的损失因子。普遍来说，当结构部件是严格地连接在一起时，$\eta_{j}$小于$\eta_{s}$，然后，内部损失因子是一个关于结构损失因子和声学辐射损失因子的方程。声学辐射损失因子可以在特别是对于轻质结构有着高辐射比例的情况下成为主导因子。</p>
-<p>我们需要区别上方提到的计算内部损失因子计算公式和总损失因子计算公式。一个子系统的总损失因子是关于它的内部损失因子和任何耦合子系统的内部损失因子，并且有关联的耦合损失因子的方程。因此，对于两个耦合子系统，所以子系统1的总损失因子计算公式为：<br>$$\eta_{TS1} = \eta_{s1} + \eta_{rad1} + \eta_{j1} + \frac{\frac{\eta_{2}}{\eta_{1}}\eta_{2}\eta_{21}}{\eta_{2}+\eta_{21}}$$<br>损失因子下标2表示子系统2，方程右侧首先三项为子系统1不同部分的内部损失因子。</p>
+<p>这三种阻尼机制是相对各自独立存在，因此，一个结构部件的内部损失因子是上方所介绍的三种阻尼关系的线性累加：</p>
+<script type="math/tex; mode=display">\eta = \eta\_{s} + \eta\_{rad} + \eta\_{j}</script><p>$\eta_{s}$是损失因子关于在此结构部件中的能量损耗。$\eta_{rad}$是关于声辐射阻尼的损失因子。$\eta_{j}$是关于在各个结构部件连接处的能量损耗的损失因子。普遍来说，当结构部件是严格地连接在一起时，$\eta_{j}$小于$\eta_{s}$，然后，内部损失因子是一个关于结构损失因子和声学辐射损失因子的方程。声学辐射损失因子可以在特别是对于轻质结构有着高辐射比例的情况下成为主导因子。</p>
+<p>我们需要区别上方提到的计算内部损失因子计算公式和总损失因子计算公式。一个子系统的总损失因子是关于它的内部损失因子和任何耦合子系统的内部损失因子，并且有关联的耦合损失因子的方程。因此，对于两个耦合子系统，所以子系统1的总损失因子计算公式为：</p>
+<script type="math/tex; mode=display">\eta\_{TS1} = \eta\_{s1} + \eta\_{rad1} + \eta\_{j1} + \frac{\frac{\eta\_{2}}{\eta\_{1}}\eta\_{2}\eta\_{21}}{\eta\_{2}+\eta\_{21}}</script><p>损失因子下标2表示子系统2，方程右侧首先三项为子系统1不同部分的内部损失因子。</p>
 <p>运用统计能量分析法（S.E.A）分析噪声和振动问题，当各个子系统的结构部件为刚性连接，通常会假设在各结构部件连接处能量损耗的损失因子，$\eta_{jj}$，为忽略不计。因此，通常假设内部损失因子，$\eta$，是指$\eta_{s} + \eta_{rad}$。但当各子系统连接处不为刚性时，$\eta_{j}$，则不能忽略。</p>
 <h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>Michael Norton, Denis Karczub <strong>Fundamentals of Noise and Vibration Analysis for Engineers</strong>, p407, Cambridge University Press, 2003</p>
 
@@ -437,7 +439,7 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 <!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -449,7 +451,7 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
