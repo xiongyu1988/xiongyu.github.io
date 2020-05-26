@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>汽车Firewall部件隔声问题讨论研究及其困难与挑战 | Xiong Yu 熊宇</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Xiong Yu 熊宇"><meta name="msapplication-starturl" content="http://yoursite.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xiong Yu 熊宇"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="汽车Firewall部件隔声问题讨论研究及其困难与挑战 | Xiong Yu 熊宇"><meta property="og:site_name" content="Xiong Yu 熊宇"><meta property="og:type" content="article"><meta property="og:url" content="http://yoursite.com/2017/03/08/2017-03-08/"><meta property="og:locale" content="en"><meta name="description" content="汽车Firewall部件隔声问题讨论研究及其困难与挑战Firewall是一个安装在汽车结构内部发动机与驾驶室之间的薄板结构装置，用于隔开发动机室和驾驶室。 Firewall不是通常来看的一块平整的薄板，Firewall会根据实际设计需求，结构上会有弯曲变化。同时，通过Firewall，汽车内部许多系统需要穿过Firewall进行链接，因此， FIrewall结构上会有许多预留孔洞。然而这些孔洞会对 - Yu Xiong - Xiong Yu 熊宇"><meta name="keywords" content="Firewall"><meta property="og:image" content="http://yoursite.com/media/-Screenshot%20from%202017-03-13%2000-53-05.png"><meta property="og:image" content="http://yoursite.com/media/-Screenshot%20from%202017-03-13%2001-03-06.png"><meta property="og:image" content="http://yoursite.com/media/Screen%20Shot%202017-03-13%20at%2010.40.22.png"><meta property="article:published_time" content="2017-03-08T16:11:11.000Z"><meta property="article:modified_time" content="2017-03-14T22:02:17.000Z"><meta property="og:updated_time" content="2017-03-14T22:02:17.000Z"><meta property="article:author" content="Yu Xiong"><meta property="article:tag" content="Firewall"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://yoursite.com/2017/03/08/2017-03-08/">
+
+    <meta name="generator" content="Hexo 4.2.1">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://yoursite.com/2017/03/08/2017-03-08/",
+    "@type": "BlogPosting",
+    "logo": "http://yoursite.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com/2017/03/08/2017-03-08/"
+    },
+    "headline": "汽车Firewall部件隔声问题讨论研究及其困难与挑战 | Xiong Yu 熊宇",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://yoursite.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2017-03-08T16:11:11.000Z",
+    "dateModified": "2017-03-14T22:02:17.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "Yu Xiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/default_avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiong Yu 熊宇",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://yoursite.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "Firewall",
+    "description": "汽车Firewall部件隔声问题讨论研究及其困难与挑战Firewall是一个安装在汽车结构内部发动机与驾驶室之间的薄板结构装置，用于隔开发动机室和驾驶室。 Firewall不是通常来看的一块平整的薄板，Firewall会根据实际设计需求，结构上会有弯曲变化。同时，通过Firewall，汽车内部许多系统需要穿过Firewall进行链接，因此， FIrewall结构上会有许多预留孔洞。然而这些孔洞会对 - Yu Xiong - Xiong Yu 熊宇"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Xiong Yu 熊宇</a></h1>
+
+    <p class="text-center header-slogan">
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">汽车Firewall部件隔声问题讨论研究及其困难与挑战</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Yu Xiong's Avatar">
+        <span>2017-03-08</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/Acoustic/">Acoustic</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#汽车Firewall部件隔声问题讨论研究及其困难与挑战"><span class="post-toc-number">1.</span> <span class="post-toc-text">汽车Firewall部件隔声问题讨论研究及其困难与挑战</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#测量汽车驾驶室噪音的复杂性"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">测量汽车驾驶室噪音的复杂性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#噪音控制工程的复杂性"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">噪音控制工程的复杂性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#汽车内部驾驶室噪音控制的重要性"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">汽车内部驾驶室噪音控制的重要性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#对于噪声控制领域的挑战"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">对于噪声控制领域的挑战</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Reference</span></a></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h3 id="汽车Firewall部件隔声问题讨论研究及其困难与挑战"><a href="#汽车Firewall部件隔声问题讨论研究及其困难与挑战" class="headerlink" title="汽车Firewall部件隔声问题讨论研究及其困难与挑战"></a>汽车Firewall部件隔声问题讨论研究及其困难与挑战</h3><p>Firewall是一个安装在汽车结构内部发动机与驾驶室之间的薄板结构装置，用于隔开发动机室和驾驶室。</p>
+<p>Firewall不是通常来看的一块平整的薄板，Firewall会根据实际设计需求，结构上会有弯曲变化。同时，通过Firewall，汽车内部许多系统需要穿过Firewall进行链接，因此， FIrewall结构上会有许多预留孔洞。然而这些孔洞会对驾驶室内的噪音控制起到很大的副作用。</p>
+<p>汽车驾驶室内的噪音控制与其他领域的噪声控制有许多差异，比如，社区居民噪音，工业制造噪音，音乐厅噪音，等等。汽车驾驶室噪音控制是一个综合性系统工程，包括，多个噪音能量源，复杂的气动噪声传输，与此同时，每个人对于汽车噪音的看法不是唯一的。</p>
+<p>任何噪音控制问题可以简化为”声源-传输-接收“三个阶段的理论模型，如下图所示。<br><img src="/media/-Screenshot%20from%202017-03-13%2000-53-05.png" alt="-Screenshot from 2017-03-13 00-53-05"></p>
+<p>此图中, 驾驶室可视为接收噪音部分，此部分将接收并处理来自各个音源所产生并传输过来的噪音。</p>
+<ul>
+<li>音源：引擎，轮胎，路面，空气动力，其他。</li>
+<li>传输：空气传输，结构传输，综合一起。</li>
+<li>接收：乘客，驾驶室内人员。</li>
+</ul>
+<p>第二张图以同样的关系展示更具体详尽的信息。<br><img src="/media/-Screenshot%20from%202017-03-13%2001-03-06.png" alt="-Screenshot from 2017-03-13 01-03-06-w734"></p>
+<p>这两张图将会用随后的讨论，汽车驾驶室噪音的测量是十分困难的，同时，其噪音控制也比其他领域的噪音控制问题更加复杂。</p>
+<h4 id="测量汽车驾驶室噪音的复杂性"><a href="#测量汽车驾驶室噪音的复杂性" class="headerlink" title="测量汽车驾驶室噪音的复杂性"></a>测量汽车驾驶室噪音的复杂性</h4><ul>
+<li><p>Low Frequency Dominance:<br>汽车驾驶室噪音主要有非常高分贝的低频段噪音主导，并随着频率的增高，分贝以6-7db/octave梯度减弱。如下图所示。<br><img src="/media/Screen%20Shot%202017-03-13%20at%2010.40.22.png" alt="Screen Shot 2017-03-13 at 10.40.22"></p>
+</li>
+<li><p>Rich Spectral Content:<br>汽车驾驶室内噪音频谱范围很大并且有很强的随机性，与此同时，伴随着来自许多音源和传输中产生的很强的音调和合音输入。</p>
+</li>
+<li><p>Directionality in Contained Space:<br>驾驶室内驾驶人和乘客的位置是固定的，所以没有移动的可能性。同时，接收到来自确定方位的中高频率的噪音，如风噪泄露，会产生双耳和心理噪声的影响。</p>
+</li>
+<li><p>Masking Relationship:<br>路面与轮胎之间产生的噪声可能会覆盖引擎产生的噪音或者风产生的噪音，或者反之亦然。许多噪音与其他噪音类似，如路噪和风噪。</p>
+</li>
+<li><p>Noise Quality is Key Factor:<br>这是主观的反应，但没有很好的公认定义。</p>
+</li>
+<li><p>Operator Interaction:<br>驾驶人与噪音之间有着“亲密”的关系很可能会影响评定，比如，对于超级跑车，引擎所产生的噪声是人们所期望的。</p>
+</li>
+<li><p>Operation vs. Noise Appropriateness:<br>比如风噪在高速运行的汽车下是可以接受的，但在低速下则不可。</p>
+</li>
+<li><p>Vehicle Quality Implications:<br>有些类型的噪音带来非常严重的影响，比如，汽车内部各种部件之间由于年久的原因所产生咯吱咯吱的响声(squeaks/rattles)，风噪。</p>
+</li>
+<li><p>Wide Range of Noise Phenomena:<br>汽车运行在一个复杂的环境之中，速度，载荷，地面状况，等等，这些都会产生很多频率范围很大的噪音。</p>
+</li>
+<li><p>Sensitivity to Operating/Environmental Conditions:<br>许多噪音现象在运行状态下非常敏感，因此需要很多控制。</p>
+</li>
+<li><p>Noise Quality Relationships to Vibration:<br>有触感的输入对于评定噪音质量是重要的依据，但是非常难以量化。</p>
+</li>
+<li><p>Communications Factor:<br>在驾驶室内人员之间的交流对话品质测量在车辆运行时是非常重要的，但是现在并没有很好的指导性文件。</p>
+</li>
+</ul>
+<h4 id="噪音控制工程的复杂性"><a href="#噪音控制工程的复杂性" class="headerlink" title="噪音控制工程的复杂性"></a>噪音控制工程的复杂性</h4><ul>
+<li><p>Noise System Complexity:<br>许多音源和传输途径在图二中已经展示。在真实中，有更多音源和无尽的空噪和结构噪声并且更多的综合振动噪声传输。</p>
+</li>
+<li><p>Reverberation Characteristics of Passenger Compartment:<br>不规整的驾驶室内部形状与在很多地方使用的吸音材料会有耦合效应，而且同时许多地方有极高反射性的材料，最终综合出一个极其特殊和唯一的室内噪声系统问题。</p>
+</li>
+<li><p>“Low Pass Filter” Characteristics:<br>高低频率的音源以及传输途径的综合影响有效减弱了高频率对于驾驶隔舱的影响，可由图三中看出。</p>
+</li>
+<li><p>Small Room Dimension Implication:<br>对于大多是家用汽车来说驾驶隔舱尺寸偏小，同时缺失低频段阻尼材料，从而导致存在许多活跃的声学模态。</p>
+</li>
+<li><p>Sensitivity TO Operating Conditions:<br>不同的由振动产生的能量音源和其传输通常非常取决于车辆的运行状态，比如，车速，引擎转速，载荷，运行温度，轮胎温度，等等。而这些状态在噪音控制工程师下有严格要求，有时之间还会有冲突。</p>
+</li>
+<li><p>Sensitivity to Manufacturing Processes:<br>噪声产生通常直接与各个部件的质量和生产装配时的品质有很大的关系，因为汽车是非常复杂的机器，同时生产量巨大，所以质量控制和噪声控制密切相关。</p>
+</li>
+<li><p>Conflicting Product Requirements:<br>汽车工业相关要求，如燃油经济性，排放控制，和人员安全设计，有时会与噪声控制的需要产生冲突。</p>
+</li>
+<li><p>Economic Pressures:<br>在降低噪音的影响的同时，要有策略使消费者能够感知到，同时不能增加太多成本，才能赢得当今的市场。</p>
+</li>
+<li><p>Design/Tooling LeadTime:<br>降噪控制如果需要长时间的研发时间，对于最终的产品生产复杂部件和组装会导致许多限制和失去机会做实验验证工作。</p>
+</li>
+<li><p>Multiple Configurations:<br>经常许多组合有传动装置，配件，悬挂，轮胎，等等 都需要达到消费者的需求。这些组合通常需要专门的噪声控制考虑，有时还需要对于解决方案做出妥协。</p>
+</li>
+<li><p>“Fashion Industry” Aspect:<br>对于很多消费者来说因为汽车文化仍然保留着很高程度带有感情色彩的外形造型需求。所以在设计过程中需要优先考虑美学和跟随当下潮流。</p>
+</li>
+</ul>
+<h4 id="汽车内部驾驶室噪音控制的重要性"><a href="#汽车内部驾驶室噪音控制的重要性" class="headerlink" title="汽车内部驾驶室噪音控制的重要性"></a>汽车内部驾驶室噪音控制的重要性</h4><ul>
+<li>汽车在人们生活中扮演着一个主要和快速增长的角色，有着极高的需求量。</li>
+<li>驾驶室内部噪音大小是使用者和潜在购买者一个很重的考虑因素之一。</li>
+</ul>
+<h4 id="对于噪声控制领域的挑战"><a href="#对于噪声控制领域的挑战" class="headerlink" title="对于噪声控制领域的挑战"></a>对于噪声控制领域的挑战</h4><ul>
+<li>噪声质量行业标准需要针对汽车行业做出针对性的改进和调整。</li>
+<li>发展双耳传感器的行业标准。</li>
+<li>发展主动噪音振动降噪技术，包括，软件，硬件，同时制定行业标准。</li>
+<li>改进当前对于结构声学仿真模型使用的数值分析方法。</li>
+<li>对于初级噪声控制工程师和技工的培训和教育。</li>
+</ul>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>James P. Shedlowsky, <strong>Interior Noise Control in An Automobile A Complex and Significant Challenge,</strong> InterNoise 1992, Toronto, Canada.</p>
+
+                    </article>
+                    
+
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2017-03-08T16:11:11.000Z" itemprop="datePublished">2017-03-08</time>
+
+    , Updated at&nbsp;<time datetime="2017-03-14T22:02:17.000Z" itemprop="dateModified">2017-03-14</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/Acoustic/'>Acoustic</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/Firewall/" rel="tag">#&nbsp;Firewall</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2017/03/13/2017-03-14/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">多种参数对于Firewall声学表现的实验研究</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2017/01/03/plans2017/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Plans 2017</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://yoursite.com">Xiong Yu 熊宇</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    </body>
+
+</html>

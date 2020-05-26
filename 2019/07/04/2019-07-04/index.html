@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>声学基本公式 | Xiong Yu 熊宇</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Xiong Yu 熊宇"><meta name="msapplication-starturl" content="http://yoursite.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xiong Yu 熊宇"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="声学基本公式 | Xiong Yu 熊宇"><meta property="og:site_name" content="Xiong Yu 熊宇"><meta property="og:type" content="article"><meta property="og:url" content="http://yoursite.com/2019/07/04/2019-07-04/"><meta property="og:locale" content="en"><meta name="description" content="Three methods are available for approaching problems in acoustics.  wave acoustics ray acoustics energy acoustics  Wave acoustics is a description of wave propagation using either molecular or particu - Yu Xiong - Xiong Yu 熊宇"><meta name="keywords" content="Equation"><meta property="article:published_time" content="2019-07-05T02:18:16.000Z"><meta property="article:modified_time" content="2020-05-25T12:52:38.527Z"><meta property="og:updated_time" content="2020-05-25T12:52:38.527Z"><meta property="article:author" content="Yu Xiong"><meta property="article:tag" content="Equation"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://yoursite.com/2019/07/04/2019-07-04/">
+
+    <meta name="generator" content="Hexo 4.2.1">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://yoursite.com/2019/07/04/2019-07-04/",
+    "@type": "BlogPosting",
+    "logo": "http://yoursite.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com/2019/07/04/2019-07-04/"
+    },
+    "headline": "声学基本公式 | Xiong Yu 熊宇",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://yoursite.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2019-07-05T02:18:16.000Z",
+    "dateModified": "2020-05-25T12:52:38.527Z",
+    "author": {
+        "@type": "Person",
+        "name": "Yu Xiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/default_avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiong Yu 熊宇",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://yoursite.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "Equation",
+    "description": "Three methods are available for approaching problems in acoustics.  wave acoustics ray acoustics energy acoustics  Wave acoustics is a description of wave propagation using either molecular or particu - Yu Xiong - Xiong Yu 熊宇"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Xiong Yu 熊宇</a></h1>
+
+    <p class="text-center header-slogan">
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">声学基本公式</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Yu Xiong's Avatar">
+        <span>2019-07-04</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/Acoustic/">Acoustic</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#声学基本公式"><span class="post-toc-number">1.</span> <span class="post-toc-text">声学基本公式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Conservation-of-mass"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Conservation of mass</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Euler’s-equation-of-motion"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Euler’s equation of motion</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Equation-of-state"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Equation of state</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#References"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">References:</span></a></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>Three methods are available for approaching problems in acoustics.</p>
+<ol>
+<li>wave acoustics</li>
+<li>ray acoustics</li>
+<li>energy acoustics</li>
+</ol>
+<p>Wave acoustics is a description of wave propagation using either molecular or particulate models. The general preference is for the particulate model, a particle being a fluid volume large enough to contain millions of molecules and small enough such that density, pressure and temperature are constant. </p>
+<p>Ray acoustics is a description of wave propagation over large distances, e.g. the atmosphere. Families of rays are used to describe the propagation of sound waves and inhomogeneities such as temperature gradients or wind have to be accounted for. Over large distances, the ray tracing procedures are preferred because they approximate and simplify the exact wave approach. </p>
+<p>Energy acoustics describes the propagation of sound waves in terms of the transfer of energy of various statistical parameters where techniques referred to as statistical energy analysis are used.</p>
+<h1 id="声学基本公式"><a href="#声学基本公式" class="headerlink" title="声学基本公式"></a>声学基本公式</h1><p>The spatial and time dependence of the sound waves radiating away from a vibrating structure are governed by the physics of the acoustic medium. The change in pressure associated with a sound wave is usually very small in comparison to the ambient pressure, so that the pressure, density, and particle velocity of an acoustic disturbance can be written in terms of an ambient quantity, plus a small fluctuating quantity. Defining the acoustic variables in the form allows products of the variable s to be linearized. The nonlinear term of small fluctuating quantity is small in comparison to the linear term of ambient quantity. Hence, the partial differential equations governing sound waves can be derived.</p>
+<p>The propagation and radiation of sound waves is governed by three basic equations of fluid dynamics:</p>
+<ul>
+<li>the equation of continuity or conservation of mass</li>
+<li>Euler’s equation of motion of a fluid</li>
+<li>the equation of state</li>
+</ul>
+<p>These three equations can be combined to give the wave equation, which is the basic partial differential equation governing the spatial and time dependence of an acoustic field.</p>
+<p>As for wave propagation in solids, several simplifying assumptions need to be made, they are:</p>
+<ul>
+<li>the fluid is an ideal gas.</li>
+<li>the fluid is perfectly elastic - i.e. Hooke’s law holds.</li>
+<li>the fluid is homogeneous and isotropic.</li>
+<li>the fluid is inviscid - i.e. viscous-damping and heat conduction terms are neglected.</li>
+<li>the wave propagation through the fluid media is adiabatic and reversible.</li>
+<li>gravitational effects are neglected - i.e. pressure and density are assumed to be constant.</li>
+<li>the fluctuations are assumed to be small - i.e. the system behaves linearly.</li>
+</ul>
+<h2 id="Conservation-of-mass"><a href="#Conservation-of-mass" class="headerlink" title="Conservation of mass"></a>Conservation of mass</h2><p>The equation of conservation of mass (continuity) provides a relationship between the density and particle velocity. For mass to be conserved, the time rate of change of the elemental mass has to equal the net mass flow into the elemental volume.</p>
+<h2 id="Euler’s-equation-of-motion"><a href="#Euler’s-equation-of-motion" class="headerlink" title="Euler’s equation of motion"></a>Euler’s equation of motion</h2><p>It is simply a Newton’s second law for a fluid element in motion. It provides a relationship between the pressure, the density, and the particle velocity. Physically, it simply states that the change in the momentum of a fluid particle is equal to the external forces applied to the particle.</p>
+<h2 id="Equation-of-state"><a href="#Equation-of-state" class="headerlink" title="Equation of state"></a>Equation of state</h2><p>The thermodynamic equation of state relates the pressure, density and absolute temperature of a fluid. The propagation of sound waves in air does not generally produce any significant changes of thermal energy between particles, and the entropy of the gas is constant. In addition, the thermal conductivity of the gas is very small. The propagation of sound waves can therefore be assumed to be nearly adiabatic. This assumption is valid for the linear (small amplitude) sound waves within the audio-frequency range.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h2><ol>
+<li>Michael Norton and Denis Karczub, Fundamentals of noise and vibration analysis for engineers</li>
+<li>Gary H. Koopmann and John B. Fahnline, Designing quiet structures, a sound power minimization approach</li>
+</ol>
+
+                    </article>
+                    
+
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-07-05T02:18:16.000Z" itemprop="datePublished">2019-07-04</time>
+
+    , Updated at&nbsp;<time datetime="2020-05-25T12:52:38.527Z" itemprop="dateModified">2020-05-25</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/Acoustic/'>Acoustic</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/Equation/" rel="tag">#&nbsp;Equation</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2020/05/26/hello-world/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Hello World</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2019/07/01/PreparedQuestionsComprehensiveExam/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Prepared Questions for Comprehensive Exam</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://yoursite.com">Xiong Yu 熊宇</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    </body>
+
+</html>

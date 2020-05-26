@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>声学中的灵敏度和阻抗 | Xiong Yu 熊宇</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Xiong Yu 熊宇"><meta name="msapplication-starturl" content="http://yoursite.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xiong Yu 熊宇"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="声学中的灵敏度和阻抗 | Xiong Yu 熊宇"><meta property="og:site_name" content="Xiong Yu 熊宇"><meta property="og:type" content="article"><meta property="og:url" content="http://yoursite.com/2016/08/25/mobility/"><meta property="og:locale" content="en"><meta name="description" content="Mobility (灵敏度) and Impedance (阻抗)在电学中, 灵敏度(Admittance)是阻抗(Impedance)的倒数；在声学中, 引入了阻抗(Impedance)类比的研究方法, 也就有了声阻, 声压 $p$ 和振动速度 $v$ 的比 $\frac{p}{v}$ 为声阻抗(Acoustic Impedance), 其倒数也就是导纳(Mobility)了. 根据 Dr.Ha - Yu Xiong - Xiong Yu 熊宇"><meta name="keywords" content="Acoustic, Mobility, Imepdance, 导纳, 阻抗"><meta property="article:published_time" content="2016-08-26T00:08:51.000Z"><meta property="article:modified_time" content="2016-11-18T19:45:39.000Z"><meta property="og:updated_time" content="2016-11-18T19:45:39.000Z"><meta property="article:author" content="Yu Xiong"><meta property="article:tag" content="Acoustic, Mobility, Imepdance, 导纳, 阻抗"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://yoursite.com/2016/08/25/mobility/">
+
+    <meta name="generator" content="Hexo 4.2.1">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://yoursite.com/2016/08/25/mobility/",
+    "@type": "BlogPosting",
+    "logo": "http://yoursite.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com/2016/08/25/mobility/"
+    },
+    "headline": "声学中的灵敏度和阻抗 | Xiong Yu 熊宇",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://yoursite.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2016-08-26T00:08:51.000Z",
+    "dateModified": "2016-11-18T19:45:39.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "Yu Xiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/default_avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiong Yu 熊宇",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://yoursite.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "Acoustic, Mobility, Imepdance, 导纳, 阻抗",
+    "description": "Mobility (灵敏度) and Impedance (阻抗)在电学中, 灵敏度(Admittance)是阻抗(Impedance)的倒数；在声学中, 引入了阻抗(Impedance)类比的研究方法, 也就有了声阻, 声压 $p$ 和振动速度 $v$ 的比 $\frac{p}{v}$ 为声阻抗(Acoustic Impedance), 其倒数也就是导纳(Mobility)了. 根据 Dr.Ha - Yu Xiong - Xiong Yu 熊宇"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Xiong Yu 熊宇</a></h1>
+
+    <p class="text-center header-slogan">
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">声学中的灵敏度和阻抗</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Yu Xiong's Avatar">
+        <span>2016-08-25</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/Acoustic/">Acoustic</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Mobility-灵敏度-and-Impedance-阻抗"><span class="post-toc-number">1.</span> <span class="post-toc-text">Mobility (灵敏度) and Impedance (阻抗)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#References"><span class="post-toc-number">2.</span> <span class="post-toc-text">References</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="Mobility-灵敏度-and-Impedance-阻抗"><a href="#Mobility-灵敏度-and-Impedance-阻抗" class="headerlink" title="Mobility (灵敏度) and Impedance (阻抗)"></a>Mobility (灵敏度) and Impedance (阻抗)</h2><p>在电学中, 灵敏度(Admittance)是阻抗(Impedance)的倒数；在声学中, 引入了阻抗(Impedance)类比的研究方法, 也就有了声阻, 声压 $p$ 和振动速度 $v$ 的比 $\frac{p}{v}$ 为声阻抗(Acoustic Impedance), 其倒数也就是导纳(Mobility)了.</p>
+<p>根据 Dr.Hambric 的定义:</p>
+<blockquote>
+<p>A sturcture’s mobility is the amount it vibrates when driven by a fluctuating force. </p>
+</blockquote>
+<p>结构灵敏度(Mobility)可描述为受力物体或结构受到外力 (Fluctuating Force) 作用下所产生的振动量.</p>
+<p>实验中测量结构灵敏度(Mobility)是通过安装三个加速感应器在测量结构板上, 并由锤子作为外力使测试结构产生振动, 得到的加速数值做时间积分可得到速度. 最后, 速度除以外力可以得到导纳值. 当激发点和采集点重合时称为一个激发点导纳(Drive Point Mobility), 不重合时为交叉导纳(Cross-Mobility).</p>
+<p>激发点灵敏度(Drive Point Mobility)和交叉灵敏度(Cross-Mobility)组成的矩阵(Matrices)可用来计算此结构的共振(Resonances).</p>
+<p>灵敏度(Mobility)计算公式解析:<br>$$ Mobility = \frac{v(x,y)}{F(x_{o},y_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum_{m=1}^\infty \sum_{n=1}^{\infty} (\frac{1}{\omega^{2}_{mn} - \omega^{2}} \times [\sin \frac{m\pi x}{a} \sin \frac{n\pi y}{b}]) $$</p>
+<p>$$ Mobility = \frac{v(x,y)}{F(x_{o},y_{o})} = \frac{i\omega}{\frac{\rho h a b}{4}} \times \sum_{m=1}^\infty \sum_{n=1}^{\infty} (\frac{1}{\omega^{2}_{mn} - \omega^{2}} \times [\sin \frac{m\pi x_{o}}{a} \sin \frac{n\pi y_{o}}{b}]) $$</p>
+<ul>
+<li>$(x,y)$ 为灵敏度值所在的位置; $(x_{o},y_{o})$ 为外力施加所在位置.</li>
+<li>$v$ 为速度(Velocity); $F$ 为外力 (Drive Force).</li>
+<li>结构质量 $m=\rho v = \rho h A = \rho h a b$; 模态质量 (Modal Mass) 是每一个模态的质量为$\frac{1}{4}$的总结构质量, $\frac{\rho h a b}{4}$.</li>
+<li>$\sin \frac{m\pi x_{o}}{a} \sin \frac{n\pi y_{o}}{b}$ 为此结构的激发点模态(Mode Shape at Drive Location).</li>
+<li>$\sin \frac{m\pi x}{a} \sin \frac{n\pi y}{b}$ 为此结构的响应点模态(Mode Shape at Response Location).</li>
+</ul>
+<p>由灵敏度计算公式可以看出, 灵敏度(Mobility)与质量成反比, 质量增加, 结构导纳值减小. 同时, 当激发频率 $\omega$ 接近共振频率 $\omega_{mn}$ 将产生强劲的响应, 结构灵敏度 (Mobility) 随之增强.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li>S.A. Hambric, <a href="http://www.personal.psu.edu/faculty/s/a/sah19/StructuralAcousticsTutorialPart1AcousticsToday_lowres.pdf" target="_blank" rel="noopener">“Structural Acoustics Tutorial Part I - Vibrations in Structures,”</a> Acoustics Today, Vol. 2, Issue 4, pp. 21-33, October 2006.</li>
+</ul>
+
+                    </article>
+                    
+
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2016-08-26T00:08:51.000Z" itemprop="datePublished">2016-08-25</time>
+
+    , Updated at&nbsp;<time datetime="2016-11-18T19:45:39.000Z" itemprop="dateModified">2016-11-18</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/Acoustic/'>Acoustic</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/Acoustic/" rel="tag">#&nbsp;Acoustic</a>
+
+<a class="post-tags-list-item" href="/tags/Mobility/" rel="tag">#&nbsp;Mobility</a>
+
+<a class="post-tags-list-item" href="/tags/Imepdance/" rel="tag">#&nbsp;Imepdance</a>
+
+<a class="post-tags-list-item" href="/tags/%E5%AF%BC%E7%BA%B3/" rel="tag">#&nbsp;导纳</a>
+
+<a class="post-tags-list-item" href="/tags/%E9%98%BB%E6%8A%97/" rel="tag">#&nbsp;阻抗</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2016/10/28/phase/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">相位，相速度，群速度</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2016/08/11/longtaileffect/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">长尾效应</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://yoursite.com">Xiong Yu 熊宇</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    </body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>直升机及旋翼结构简介 | Xiong Yu 熊宇</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Xiong Yu 熊宇"><meta name="msapplication-starturl" content="http://yoursite.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xiong Yu 熊宇"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="直升机及旋翼结构简介 | Xiong Yu 熊宇"><meta property="og:site_name" content="Xiong Yu 熊宇"><meta property="og:type" content="article"><meta property="og:url" content="http://yoursite.com/2016/03/24/Helicopter-intro/"><meta property="og:locale" content="en"><meta name="description" content="旋翼结构型式分类按结构型式划分，直升机可分为:单旋翼机械驱动式，这是当今最流行的一种结构，它不仅有旋翼，还有尾桨以平衡反扭矩。如图所示。 共轴式双旋翼式，两旋翼共轴，相互逆转以抵消反扭矩。如图所示的俄罗斯的卡-50 双发共轴武装直升机。 纵列式双旋翼式，两旋翼前后排列，相互逆转以抵消反扭矩。如图所示的CH-47 重型运输直升机。 横列式双旋翼，两旋翼左右横向排列，相互逆转以抵消反扭矩。如图所示的俄 - Yu Xiong - Xiong Yu 熊宇"><meta property="og:image" content="http://yoursite.com/photos/singlerotor.jpg"><meta property="og:image" content="http://yoursite.com/photos/Coaxial.jpg"><meta property="og:image" content="http://yoursite.com/photos/Tandem.jpg"><meta property="og:image" content="http://yoursite.com/photos/Transverse.jpg"><meta property="og:image" content="http://yoursite.com/photos/Tiltrotor.jpg"><meta property="og:image" content="http://yoursite.com/photos/articulatedrotor.jpg"><meta property="article:published_time" content="2016-03-24T05:38:24.000Z"><meta property="article:modified_time" content="2016-03-24T05:54:29.000Z"><meta property="og:updated_time" content="2016-03-24T05:54:29.000Z"><meta property="article:author" content="Yu Xiong"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://yoursite.com/2016/03/24/Helicopter-intro/">
+
+    <meta name="generator" content="Hexo 4.2.1">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://yoursite.com/2016/03/24/Helicopter-intro/",
+    "@type": "BlogPosting",
+    "logo": "http://yoursite.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com/2016/03/24/Helicopter-intro/"
+    },
+    "headline": "直升机及旋翼结构简介 | Xiong Yu 熊宇",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://yoursite.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2016-03-24T05:38:24.000Z",
+    "dateModified": "2016-03-24T05:54:29.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "Yu Xiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/default_avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiong Yu 熊宇",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://yoursite.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://yoursite.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "",
+    "description": "旋翼结构型式分类按结构型式划分，直升机可分为:单旋翼机械驱动式，这是当今最流行的一种结构，它不仅有旋翼，还有尾桨以平衡反扭矩。如图所示。 共轴式双旋翼式，两旋翼共轴，相互逆转以抵消反扭矩。如图所示的俄罗斯的卡-50 双发共轴武装直升机。 纵列式双旋翼式，两旋翼前后排列，相互逆转以抵消反扭矩。如图所示的CH-47 重型运输直升机。 横列式双旋翼，两旋翼左右横向排列，相互逆转以抵消反扭矩。如图所示的俄 - Yu Xiong - Xiong Yu 熊宇"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Xiong Yu 熊宇</a></h1>
+
+    <p class="text-center header-slogan">
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+    
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">直升机及旋翼结构简介</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Yu Xiong's Avatar">
+        <span>2016-03-24</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E7%9B%B4%E5%8D%87%E6%9C%BA/">直升机</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#旋翼结构型式分类"><span class="post-toc-number">1.</span> <span class="post-toc-text">旋翼结构型式分类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#直升机的控制"><span class="post-toc-number">2.</span> <span class="post-toc-text">直升机的控制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#直升机机体的组成"><span class="post-toc-number">3.</span> <span class="post-toc-text">直升机机体的组成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#旋翼系统的结构"><span class="post-toc-number">4.</span> <span class="post-toc-text">旋翼系统的结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#旋翼类型"><span class="post-toc-number">5.</span> <span class="post-toc-text">旋翼类型</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="旋翼结构型式分类"><a href="#旋翼结构型式分类" class="headerlink" title="旋翼结构型式分类"></a>旋翼结构型式分类</h2><p>按结构型式划分，直升机可分为:<br>单旋翼机械驱动式，这是当今最流行的一种结构，它不仅有旋翼，还有尾桨以平衡反扭矩。如图所示。<br><img src="/photos/singlerotor.jpg" alt="Alt text"></p>
+<p>共轴式双旋翼式，两旋翼共轴，相互逆转以抵消反扭矩。如图所示的俄罗斯的卡-50 双发共轴武装直升机。<br><img src="/photos/Coaxial.jpg" alt="Alt text"></p>
+<p>纵列式双旋翼式，两旋翼前后排列，相互逆转以抵消反扭矩。如图所示的CH-47 重型运输直升机。<br><img src="/photos/Tandem.jpg" alt="Alt text"></p>
+<p>横列式双旋翼，两旋翼左右横向排列，相互逆转以抵消反扭矩。如图所示的俄罗斯的卡-22 横列式直升机。<br><img src="/photos/Transverse.jpg" alt="Alt text"></p>
+<p>旋翼换向式，起飞时为横列式，然后旋翼轴相对机体倾转，使直升机前飞。如同普通的固定翼飞机，靠机翼产生升力，靠旋翼产生向前的力。如图所示的V-22 直升机。<br><img src="/photos/Tiltrotor.jpg" alt="Alt text"></p>
+<h2 id="直升机的控制"><a href="#直升机的控制" class="headerlink" title="直升机的控制"></a>直升机的控制</h2><p>有三种操纵装置完成对直升机四个通道的控制。</p>
+<ul>
+<li><p>驾驶杆 ―― 用来改变旋翼倾斜度。前后推拉驾驶杆，使自动倾斜器带动旋翼锥体前后倾斜，以改变俯仰角并实现纵向速度控制。驾驶杆左右操纵，使自动倾斜器带动旋翼锥体左右倾斜，以改变横滚角，实现侧向速度控制。</p>
+</li>
+<li><p>脚蹬 ―― 由尾桨拉力形成的力矩平衡旋翼反作用力矩，保证航向稳定。改变尾浆总桨距使拉力变化，实现机头转向控制。</p>
+</li>
+<li><p>总距油门杆 ―― 提放总距杆及调节油门杆，完成旋翼总桨距大小和发动机功率的交联控制，以实现直升机的高度控制，及对发动机功率的协调。</p>
+</li>
+</ul>
+<p>由此可知，若用飞行控制系统来代替驾驶员的操纵，则由四个通道组成：俯仰通道，横滚通道，航向通道及高度通道。为了提高直升机的对旋翼迎角的稳定性，在某些直升机上采用可调节的水平安定面，其面积约为0.2％～0.5％桨盘面积。当总浆距提升时（浆距－油门向上）水平安定面安装角加大，其作用是增加控制储备，在不同飞行状态下可保持平衡。</p>
+<h2 id="直升机机体的组成"><a href="#直升机机体的组成" class="headerlink" title="直升机机体的组成"></a>直升机机体的组成</h2><p>主要由机身、发动机舱、旋翼、尾梁、尾桨、水平安定面、垂直安定面和起落架等几部分组成。旋翼和尾桨显示了直升机的结构特点。</p>
+<p>旋翼是一个单独的系统，它肩负着任何飞行器飞行时所需的三种功能：推进、负重和可控性。旋翼是直升机的关键部件，其作用为：</p>
+<ul>
+<li><p>产生向上的拉力克服重力，类似于固定翼飞机的机翼作用。</p>
+</li>
+<li><p>产生向前的水平分力使直升机前进，类似于固定翼飞机的发动机。</p>
+</li>
+<li><p>产生其他分力及力矩使直升机保持平衡或作机动飞行，类似于操纵面的作用。</p>
+</li>
+<li><p>若发动机在空中发生事故停车，可及时操纵旋翼，使其像风车一样自转，产生升力，保证安全着陆。</p>
+</li>
+</ul>
+<h2 id="旋翼系统的结构"><a href="#旋翼系统的结构" class="headerlink" title="旋翼系统的结构"></a>旋翼系统的结构</h2><p>旋翼系统主要由桨叶和桨毂组成，桨叶是提供力的重要部件（由2~6 片桨叶组成），桨毂的形式决定旋翼的形式。桨叶安装在桨毂上，发动机工作时桨叶与桨毂一起旋转。对铰接式旋翼而言，其原理结构如下图所示。桨毂包含水平、垂直和轴向三个铰。旋翼的数目和组成旋翼的桨叶数目实际上依赖于直升机的尺寸和所需的飞行高度，它们是与固定翼飞行器的机翼面积、机翼载荷和机翼性能相当的。当发动机出现故障时，旋翼系统包含自由轮设备允许旋翼自由旋转。</p>
+<p><img src="/photos/articulatedrotor.jpg" alt="Alt text"></p>
+<p>水平铰、垂直铰和轴向铰也分别称为挥舞铰、摆振铰和变距铰，是旋翼的关键环节，其作用如下</p>
+<ul>
+<li><p>水平铰的作用：在直升机前飞时，由于飞行速度的存在，使得旋翼前行桨叶的相对气流速度大于后行桨叶的相对气流速度，从而使前行桨叶产生的拉力大于后行桨叶的拉力。在没有水平铰时，两侧桨叶拉力大小不等将构成滚转力矩使直升机滚转。有<br>水平铰时，情况不同。前行桨叶拉力大，便绕水平铰向上挥舞；后行桨叶拉力小，便绕水平铰向下挥舞。这样不平衡的滚转力矩无法传到机身，从而避免了直升机前飞中产生滚转。</p>
+</li>
+<li><p>垂直铰（即垂直关节）的作用：直升机前飞时，桨叶在绕轴转动时要绕水平铰挥舞，这就造成桨叶重心距旋翼轴的距离不断变化，如图1-3（b）所示。从而引起周期交变的哥氏力。所谓哥氏力（也叫回转力）是物体在旋转系统中，一面旋转一面又有<br>相对于该系统运动时所出现的一种附加惯性力。其方向顺旋转方向。其矢量表达式为<br>$$ F = 2 m \Omega V $$<br>公式中 $m$ – 桨叶质量，$\Omega$ – 旋翼旋转角速度，$V$ – 桨叶重心对旋翼轴径向速度。<br>一片桨叶的哥氏力的最大值高达桨叶自重的七倍以上。巨大的哥氏力必然会在旋转面内造成很大的交变弯矩，如果无垂直铰，桨叶根部会材料疲劳而损坏，如果传到机身，将引起机体震动加剧。有了垂直铰，桨叶绕垂直铰摆动一个角度，从而使桨叶根部所受的沿旋转方向的交变弯矩大大减少。</p>
+</li>
+<li><p>轴向铰（轴向关节）的作用：通过操作机构，可使桨叶绕轴向铰偏转，以改变桨距角的大小，从而改变桨叶的拉力。桨距角大，拉力就大，反之则减小。</p>
+</li>
+</ul>
+<h2 id="旋翼类型"><a href="#旋翼类型" class="headerlink" title="旋翼类型"></a>旋翼类型</h2><p>旋翼的类型大致分为四类：铰接式；跷跷板式；无铰接式；无轴承式。</p>
+<ul>
+<li>铰接式旋翼（又称全铰接式旋翼）是通过桨毂上设置挥舞铰、摆振铰和变距铰使每片桨叶自由地进行挥舞、摆动和变化桨距运动。</li>
+<li>跷跷板式旋翼通常是指没有单独的挥舞铰和摆振铰，仅安装跷跷板铰链，有挥舞和改变桨距的自由。</li>
+<li>无铰式旋翼没有挥舞和摆振铰链，但是有变距铰。</li>
+<li>无轴承式旋翼就是取消了挥舞铰，摆振铰和变距铰的旋翼，桨叶的挥舞、摆振和变距运动都是通过桨叶根部的柔性元件来完成的。</li>
+</ul>
+<p>全铰接式旋翼在摆振铰上带有桨毂减摆器，简称减摆器，为桨叶绕摆振铰的摆振运动提供阻尼，大大改善了桨叶的受力情况，延长了使用寿命。同时摆振器对于防止出现“地面共振”，保证其有足够的稳定性余度也是很必要的。因此全铰接式旋翼应用广泛。</p>
+<p>与全铰接式旋翼相比，跷跷板式旋翼的优点是桨毂构造简单，去掉了摆振铰、减摆器，两片桨叶共同的挥舞铰不负担离心力而只传递拉力及旋翼力矩，轴承负荷比较小，没有“地面共振”问题。但是，这种旋翼操纵功效和角速度阻尼比较小，为了加大角速度阻尼，这种形式的旋翼都要带机械增稳装置——稳定杆，没有办法改善操纵，对于机动性要求较高的直升机，上述缺点就显得很突出。</p>
+<p>与铰接式旋翼相比，无铰式旋翼结构的力学特性与飞行的力学特性联系更为密切。这种形式的旋翼会产生一些新的动力稳定性问题。无铰式旋翼没有挥舞铰和摆振铰，却仍然保留了变距用的轴向铰，因此也还不是真正的“无铰”。由于保留了承受很大力矩和离心力的变距铰，结构重量难以减轻，结构的简化也受到了限制。</p>
+<p>无铰式旋翼合乎逻辑的进一步发展，就是取消变距铰，即无轴承铰。与一般无铰式旋翼相比，无轴承旋翼的重量可减轻。</p>
+
+                    </article>
+                    
+
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2016-03-24T05:38:24.000Z" itemprop="datePublished">2016-03-24</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E7%9B%B4%E5%8D%87%E6%9C%BA/'>直升机</a>
+
+</span>
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2016/08/09/typesofrotor/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">主要旋翼类型</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2016/03/13/Helicopter-Rotor-Referece-Axes/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">直升机旋翼参考面 (Reference Axes)</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://yoursite.com">Xiong Yu 熊宇</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    </body>
+
+</html>
